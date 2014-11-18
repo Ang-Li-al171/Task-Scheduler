@@ -21,18 +21,10 @@ const char* appendWithCWD(const char* fileName){
 
 int main(int argc, const char * argv[])
 {
-
-    // read tasks from input file
-    FILE* file;
-    file = fopen(appendWithCWD("/input.txt"), "r");
-    if(!file){
-        fprintf(stderr, "Unable to open file %s", appendWithCWD("/input.txt"));
-        exit(1);
-    }
     
     // construct the data dependency graph
     DDependency dDependency;
-    Graph g = dDependency.constructDependencyG(file);
+    Graph g = dDependency.constructDependencyG(appendWithCWD("/input.txt"));
     
     // print out the data dependency graph for debugging
     for(Graph::vmap::iterator itr = g.vertices.begin(); itr!= g.vertices.end(); itr++){
@@ -43,6 +35,7 @@ int main(int argc, const char * argv[])
             cout << "has neighbor " << adjV->second->name << endl;
         }
     }
+    
     
     return 0;
 }

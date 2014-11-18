@@ -16,7 +16,7 @@ class DDependency{
     
 public:
     DDependency(void);
-    Graph constructDependencyG(const FILE*);
+    Graph constructDependencyG(const string&);
     
 };
 
