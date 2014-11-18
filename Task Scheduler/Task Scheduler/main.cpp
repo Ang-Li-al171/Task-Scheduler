@@ -7,27 +7,35 @@
 //
 
 #include <iostream>
+#include <unistd.h>
 #include "Graph.h"
+#include "DDependency.h"
+
+const char* appendWithCWD(const char* fileName){
+    char buffer[200];
+    getcwd(buffer, 200);
+    std::string file = std::string(buffer) + fileName;
+    const char* filePath = file.c_str();
+    return filePath;
+}
 
 int main(int argc, const char * argv[])
 {
 
-    // insert code here...
+    // read tasks from input file
+    FILE* file;
+    file = fopen(appendWithCWD("/input.txt"), "r");
+    if(!file){
+        fprintf(stderr, "Unable to open file %s", appendWithCWD("/input.txt"));
+        exit(1);
+    }
     
-    Graph* g = new Graph();
+    // construct the data dependency graph
+    DDependency dDependency;
+    Graph g = dDependency.constructDependencyG(file);
     
-    g->addVertex("V1");
-    g->addVertex("V2");
-    g->addVertex("V3");
-    g->addVertex("V4");
-    g->addVertex("V5");
-    
-    g->addEdge("V1", "V2", 1);
-    g->addEdge("V2", "V3", 1);
-    g->addEdge("V3", "V4", 1);
-    g->addEdge("V4", "V5", 1);
-    
-    for(Graph::vmap::iterator itr = g->vertices.begin(); itr!= g->vertices.end(); itr++){
+    // print out the data dependency graph for debugging
+    for(Graph::vmap::iterator itr = g.vertices.begin(); itr!= g.vertices.end(); itr++){
         cout << "vertex " << itr->second->name << " : " << endl;
         for(vector<vertex::ve>::iterator adjV = itr->second->adj.begin();
             adjV != itr->second->adj.end();
@@ -35,6 +43,7 @@ int main(int argc, const char * argv[])
             cout << "has neighbor " << adjV->second->name << endl;
         }
     }
+    
     return 0;
 }
 

@@ -10,6 +10,7 @@
 		BC77ADEE1A1AEBF30024AF51 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADED1A1AEBF30024AF51 /* main.cpp */; };
 		BC77ADF01A1AEBF30024AF51 /* Task_Scheduler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC77ADEF1A1AEBF30024AF51 /* Task_Scheduler.1 */; };
 		BC77ADFB1A1AED280024AF51 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADF91A1AED280024AF51 /* Graph.cpp */; };
+		BC77ADFE1A1AFA8A0024AF51 /* DDependency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,8 @@
 		BC77ADEF1A1AEBF30024AF51 /* Task_Scheduler.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = Task_Scheduler.1; sourceTree = "<group>"; };
 		BC77ADF91A1AED280024AF51 /* Graph.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Graph.cpp; sourceTree = "<group>"; };
 		BC77ADFA1A1AED280024AF51 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DDependency.cpp; sourceTree = "<group>"; };
+		BC77ADFD1A1AFA8A0024AF51 /* DDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDependency.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				BC77ADEF1A1AEBF30024AF51 /* Task_Scheduler.1 */,
 				BC77ADF91A1AED280024AF51 /* Graph.cpp */,
 				BC77ADFA1A1AED280024AF51 /* Graph.h */,
+				BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */,
+				BC77ADFD1A1AFA8A0024AF51 /* DDependency.h */,
 			);
 			path = "Task Scheduler";
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC77ADFB1A1AED280024AF51 /* Graph.cpp in Sources */,
+				BC77ADFE1A1AFA8A0024AF51 /* DDependency.cpp in Sources */,
 				BC77ADEE1A1AEBF30024AF51 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

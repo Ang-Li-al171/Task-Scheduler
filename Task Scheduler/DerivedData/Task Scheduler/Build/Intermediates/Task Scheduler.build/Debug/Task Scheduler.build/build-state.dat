@@ -3,6 +3,7 @@ v6
 r1
 cCheck dependencies
 cCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/Graph.o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/Graph.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/DDependency.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 cLd /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler normal x86_64
 
@@ -191,22 +192,36 @@ c00000000536C25F00000000000001770
 t1399596528
 s6000
 
+N/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/DDependency.o
+t1416284044
+s122952
+
 N/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/Graph.o
 t1416280697
 s264544
 
 N/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/Task Scheduler.LinkFileList
-c00000000546AB9CD0000000000000163
-t1416280525
-s355
+c00000000546AC698000000000000021B
+t1416283800
+s539
 
 N/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/main.o
-t1416282659
-s171204
+t1416284560
+s180640
 
 N/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Products/Debug/Task Scheduler
-t1416282634
-s57428
+t1416284126
+s61052
+
+N/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.cpp
+c00000000546AC78B000000000000021F
+t1416284043
+s543
+
+N/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.h
+c00000000546AC60D00000000000001A2
+t1416283661
+s418
 
 N/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/Graph.cpp
 c00000000546ABA3D00000000000002BD
@@ -219,9 +234,12 @@ t1416280094
 s690
 
 N/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/main.cpp
-c00000000546AC221000000000000039D
-t1416282657
-s925
+c00000000546AC8E10000000000000503
+t1416284385
+s1283
+
+CBuild AST from /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/DDependency.cpp
+r0
 
 CBuild AST from /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/Graph.cpp
 r0
@@ -234,7 +252,24 @@ r0
 
 CCheck dependencies
 r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies1bf277a2f91aba41^eb3a78a2f91aba41^---0#1#1#--18"Check dependencies36"A2BDCA4F-A94E-45D0-A4E5-30C239DAD01B-
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependenciesf99ebd0e011bba41^7731c90e011bba41^---0#1#1#--18"Check dependencies36"6997D5F5-0E91-42A8-BAC2-A9A934900029-
+
+CCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/DDependency.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s437976843.806486
+e437976844.438858
+r1
+xCompileC
+xDerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/DDependency.o
+x/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+d/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.cpp
+d/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.h
+d/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/Graph.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.cpp236"CompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.o Task\ Scheduler/DDependency.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler3f8ece0bff1aba41^205d700cff1aba41^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/angli/Documents/Task-Scheduler/Task%20Scheduler/Task%20Scheduler/DDependency.cpp0000000000000000^3711"CompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.o Task\ Scheduler/DDependency.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/angli/Documents/Task-Scheduler/Task Scheduler"    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -fmodules -fmodules-cache-path=/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-generated-files.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-own-target-headers.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-all-target-headers.hmap -iquote /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-project-headers.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/DerivedSources/x86_64 -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/DerivedSources -F/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -MMD -MT dependencies -MF /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.d --serialize-diagnostics /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.dia -c /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/DDependency.cpp -o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/DDependency.o36"0B08898D-0D46-49AD-982D-0AD6D50AF0C9-
+bCA077C0F-DE23-418A-B29F-7A6EC9256D76
 
 CCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/Graph.o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/Graph.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
 s437973496.857648
@@ -256,8 +291,8 @@ CCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/
 r0
 
 CCompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
-s437975458.469730
-e437975459.132800
+s437977358.788275
+e437977360.176932
 r1
 xCompileC
 xDerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/main.o
@@ -268,12 +303,13 @@ xc++
 xcom.apple.compilers.llvm.clang.1_0.compiler
 d/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/main.cpp
 d/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/Graph.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/main.cpp222"CompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o Task\ Scheduler/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler036078a2f91aba41^4f0322a3f91aba41^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/angli/Documents/Task-Scheduler/Task%20Scheduler/Task%20Scheduler/main.cpp0000000000000000^3669"CompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o Task\ Scheduler/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/angli/Documents/Task-Scheduler/Task Scheduler"    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -fmodules -fmodules-cache-path=/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-generated-files.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-own-target-headers.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-all-target-headers.hmap -iquote /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-project-headers.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/DerivedSources/x86_64 -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/DerivedSources -F/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -MMD -MT dependencies -MF /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.dia -c /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/main.cpp -o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o36"751847FC-F751-4AA0-ABA8-696F6E63FAB6-
-b1E2D06B0-C657-4007-AD3E-40303E5C93CE
+d/Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/DDependency.h
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/angli/Documents/Task-Scheduler/Task Scheduler/Task Scheduler/main.cpp222"CompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o Task\ Scheduler/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler10ebc90e011bba41^5d4e2d10011bba41^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/angli/Documents/Task-Scheduler/Task%20Scheduler/Task%20Scheduler/main.cpp0000000000000000^3669"CompileC DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o Task\ Scheduler/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd "/Users/angli/Documents/Task-Scheduler/Task Scheduler"    export LANG=en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=gnu++11 -stdlib=libc++ -fmodules -fmodules-cache-path=/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/ModuleCache -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Werror=return-type -Werror=deprecated-objc-isa-usage -Werror=objc-root-class -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wconditional-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -DDEBUG=1 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.9 -g -fvisibility-inlines-hidden -Wno-sign-conversion -iquote /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-generated-files.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-own-target-headers.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-all-target-headers.hmap -iquote /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Task\ Scheduler-project-headers.hmap -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/DerivedSources/x86_64 -I/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/DerivedSources -F/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -MMD -MT dependencies -MF /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.dia -c /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/Task\ Scheduler/main.cpp -o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/main.o36"0BFE0CA4-2B4D-42EB-9EDA-E1404A9AC841-
+bEB0C593F-A4A4-4CED-B211-1CD4CE247632
 
 CLd /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler normal x86_64
-s437975459.135078
-e437975459.159074
+s437977360.178445
+e437977360.779851
 r1
 xLd
 x/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Products/Debug/Task Scheduler
@@ -281,6 +317,7 @@ xnormal
 xx86_64
 d/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/Task Scheduler.LinkFileList
 d/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/Graph.o
+d/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/DDependency.o
 d/Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Intermediates/Task Scheduler.build/Debug/Task Scheduler.build/Objects-normal/x86_64/main.o
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libc++.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/libSystem.dylib
@@ -315,6 +352,6 @@ d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunc.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libunwind.dylib
 d/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/usr/lib/system/libxpc.dylib
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Link /Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Products/Debug/Task Scheduler81"Ld DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler normal x86_64f3aa22a3f91aba41^1fba28a3f91aba41^---0#0#1#--1237"Ld DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler normal x86_64    cd "/Users/angli/Documents/Task-Scheduler/Task Scheduler"    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -F/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -filelist /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/Task\ Scheduler.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/Task\ Scheduler_dependency_info.dat -o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler36"AA4FFEC4-9499-407E-8CA8-417B4F0DE5C2-
-b1E2D06B0-C657-4007-AD3E-40303E5C93CE
+lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection120"Link /Users/angli/Documents/Task-Scheduler/Task Scheduler/DerivedData/Task Scheduler/Build/Products/Debug/Task Scheduler81"Ld DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler normal x86_6476c02d10011bba41^8fa5c710011bba41^---0#0#1#--1237"Ld DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler normal x86_64    cd "/Users/angli/Documents/Task-Scheduler/Task Scheduler"    export MACOSX_DEPLOYMENT_TARGET=10.9    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk -L/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -F/Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug -filelist /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/Task\ Scheduler.LinkFileList -mmacosx-version-min=10.9 -stdlib=libc++ -Xlinker -dependency_info -Xlinker /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Intermediates/Task\ Scheduler.build/Debug/Task\ Scheduler.build/Objects-normal/x86_64/Task\ Scheduler_dependency_info.dat -o /Users/angli/Documents/Task-Scheduler/Task\ Scheduler/DerivedData/Task\ Scheduler/Build/Products/Debug/Task\ Scheduler36"816B90C2-7496-4532-B7E4-664215EC8A77-
+bEB0C593F-A4A4-4CED-B211-1CD4CE247632
 
