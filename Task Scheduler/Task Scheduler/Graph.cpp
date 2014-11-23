@@ -28,3 +28,15 @@ void Graph::addEdge(const string &from, const string &to, double cost){
     pair<int, vertex*> edge = make_pair(cost, t);
     f->adj.push_back(edge);
 }
+
+void Graph::printGraph(void){
+    // print out the data dependency graph for debugging
+    for(Graph::vmap::iterator itr = vertices.begin(); itr!= vertices.end(); itr++){
+        cout << "vertex " << itr->second->name << " : " << endl;
+        for(vector<vertex::ve>::iterator adjV = itr->second->adj.begin();
+            adjV != itr->second->adj.end();
+            adjV++){
+            cout << "has neighbor " << adjV->second->name << endl;
+        }
+    }
+}

@@ -26,16 +26,7 @@ int main(int argc, const char * argv[])
     DDependency dDependency;
     Graph g = dDependency.constructDependencyG(appendWithCWD("/input.txt"));
     
-    // print out the data dependency graph for debugging
-    for(Graph::vmap::iterator itr = g.vertices.begin(); itr!= g.vertices.end(); itr++){
-        cout << "vertex " << itr->second->name << " : " << endl;
-        for(vector<vertex::ve>::iterator adjV = itr->second->adj.begin();
-            adjV != itr->second->adj.end();
-            adjV++){
-            cout << "has neighbor " << adjV->second->name << endl;
-        }
-    }
-    
+    g.printGraph();
     
     return 0;
 }

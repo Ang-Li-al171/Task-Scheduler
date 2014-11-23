@@ -34,6 +34,7 @@ public:
     vmap vertices;
     void addVertex(const string&);
     void addEdge(const string& from, const string& to, double cost);
+    void printGraph(void);
 };
 
 #endif /* defined(__Task_Scheduler__Graph__) */

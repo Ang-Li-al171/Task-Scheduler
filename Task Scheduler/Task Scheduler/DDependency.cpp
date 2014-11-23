@@ -11,95 +11,176 @@
 #include <string>
 #include <fstream>
 
+// register to line map: maps register name string to the line it's read/written
+typedef map<string,vertex*> r2lMap;
+r2lMap read;
+r2lMap written;
+
+Graph dataG;
+
+
 DDependency::DDependency(void){}
 
-std::string replaceAll(std::string subject, const std::string& search, const std::string& replace){
+string replaceAll(string subject, const string& search, const string& replace){
     
     size_t pos = 0;
-    while((pos=subject.find(search, pos)) != std::string::npos){
+    while((pos=subject.find(search, pos)) != string::npos){
         subject.replace(pos, search.length(), replace);
         pos += replace.length();
     }
     return subject;
 }
 
-pair<std::string,std::string> nextToken(std::string line, const std::string& delimiter){
+pair<string,string> nextToken(string line, const string& delimiter){
     size_t pos = line.find(delimiter);
-    std::string token = line.substr(0, pos);
+    string token = line.substr(0, pos);
     line.erase(0, pos+delimiter.length());
     return make_pair(token, line);
 }
 
-void rType(map<string,vertex*> read, map<string,vertex*> written, string line, const string& delimiter){
+string findRegInMem(string memAddr){
+    size_t pos = memAddr.find("(");
+    size_t pos2 = memAddr.find(")");
+    return memAddr.substr(pos+1, pos2-2);
+}
+
+vertex* writeDependency(const string& rd){
+    r2lMap::iterator iter = read.find(rd);
+    r2lMap::iterator iter2 = written.find(rd);
+    if(iter!=read.end()){
+        return iter->second;
+    } else {
+        if(iter2!=written.end()){
+            return iter2->second;
+        } else {
+            return NULL;
+        }
+    }
+}
+
+vertex* readDependency(const string& r){
+    r2lMap::iterator iter = written.find(r);
+    if(iter!=read.end()){
+        return iter->second;
+    } else {
+        return NULL;
+    }
+}
+
+void rType(string line, const string& delimiter, const string& oriLine){
     
-    pair<std::string,std::string> result;
+    pair<string,string> result;
     
     result = nextToken(line, delimiter);
-    std::string rd = result.first;
+    string rd = result.first;
     line = result.second;
+    vertex* d = writeDependency(rd);
+    if(d!=NULL){
+        dataG.addEdge(d->name, oriLine, 1);
+    }
     
     result = nextToken(line, delimiter);
-    std::string rs = result.first;
+    string rs = result.first;
     line = result.second;
+    vertex* d2 = readDependency(rs);
+    if(d2!=NULL){
+        dataG.addEdge(d2->name, oriLine, 1);
+    }
     
     result = nextToken(line, delimiter);
-    std::string rt = result.first;
+    string rt = result.first;
     line = result.second;
+    vertex* d3 = readDependency(rt);
+    if(d3!=NULL){
+        dataG.addEdge(d3->name, oriLine, 1);
+    }
+    
+    written[rd]=new vertex(oriLine);
+    read[rs]=new vertex(oriLine);
+    read[rt]=new vertex(oriLine);
     
     cout << rd << "+" << rs << "+" << rt << endl;
 }
 
-void iType(map<string,vertex*> read, map<string,vertex*> written, string line, const string& delimiter){
+void iType(string line, const string& delimiter, const string& oriLine){
     
-    pair<std::string,std::string> result;
-    
-    result = nextToken(line, delimiter);
-    std::string rd = result.first;
-    line = result.second;
+    pair<string,string> result;
     
     result = nextToken(line, delimiter);
-    std::string rs = result.first;
+    string rd = result.first;
     line = result.second;
+    vertex* d = writeDependency(rd);
+    if(d!=NULL){
+        dataG.addEdge(d->name, oriLine, 1);
+    }
+    
+    result = nextToken(line, delimiter);
+    string rs = result.first;
+    line = result.second;
+    vertex* d2 = readDependency(rs);
+    if(d2!=NULL){
+        dataG.addEdge(d2->name, oriLine, 1);
+    }
+    
+    written[rd]=new vertex(oriLine);
+    read[rs]=new vertex(oriLine);
     
     cout << rd << "+" << rs << "+ " << endl;
 }
 
-void lwType(map<string,vertex*> read, map<string,vertex*> written, string line, const string& delimiter){
+void lwType(string line, const string& delimiter, const string& oriLine){
     
-    pair<std::string,std::string> result;
-    
-    result = nextToken(line, delimiter);
-    std::string rd = result.first;
-    line = result.second;
+    pair<string,string> result;
     
     result = nextToken(line, delimiter);
-    std::string rs = result.first;
+    string rd = result.first;
     line = result.second;
+    vertex* d = writeDependency(rd);
+    if(d!=NULL){
+        dataG.addEdge(d->name, oriLine, 1);
+    }
+    
+    result = nextToken(line, delimiter);
+    string rs = findRegInMem(result.first);
+    line = result.second;
+    vertex* d2 = readDependency(rs);
+    if(d2!=NULL){
+        dataG.addEdge(d2->name, oriLine, 1);
+    }
+    
+    written[rd]=new vertex(oriLine);
+    read[rs]=new vertex(oriLine);
     
     cout << rd << "+" << rs << "+ " << endl;
 }
 
-void swType(map<string,vertex*> read, map<string,vertex*> written, string line, const string& delimiter){
+void swType(string line, const string& delimiter, const string& oriLine){
     
-    pair<std::string,std::string> result;
-    
-    result = nextToken(line, delimiter);
-    std::string rs = result.first;
-    line = result.second;
+    pair<string,string> result;
     
     result = nextToken(line, delimiter);
-    std::string rt = result.first;
+    string rs = result.first;
     line = result.second;
+    vertex* d2 = readDependency(rs);
+    if(d2!=NULL){
+        dataG.addEdge(d2->name, oriLine, 1);
+    }
+    
+    result = nextToken(line, delimiter);
+    string rt = findRegInMem(result.first);
+    line = result.second;
+    vertex* d3 = readDependency(rt);
+    if(d3!=NULL){
+        dataG.addEdge(d3->name, oriLine, 1);
+    }
+    
+    read[rs]=new vertex(oriLine);
+    read[rt]=new vertex(oriLine);
     
     cout << " " << "+" << rs << "+" << rt << endl;
 }
 
 Graph DDependency::constructDependencyG(const string &instrFile){
-    
-    // register to line map: maps register name string to the line it's read/written
-    typedef map<string,vertex*> r2lMap;
-    r2lMap read;
-    r2lMap written;
     
     // for file inputs
     string line;
@@ -111,28 +192,31 @@ Graph DDependency::constructDependencyG(const string &instrFile){
             line = replaceAll(line, ",", "");
             
             // take the instr name from instruction first
-            std::string delimiter = " ";
-            std::string currToken;
+            string delimiter = " ";
+            string currToken;
             
-            pair<std::string,std::string> result = nextToken(line, delimiter);
+            string originalLine = line;
+            dataG.addVertex(line);
+            
+            pair<string,string> result = nextToken(line, delimiter);
             currToken = result.first;
             line = result.second;
             
             // tokenize the line, and deal with the instruction, assuming space delimited
             if(currToken.compare("add")==0){
-                rType(read, written, line, delimiter);
+                rType(line, delimiter, originalLine);
             }
             else if(currToken.compare("addi")==0){
-                iType(read, written, line, delimiter);
+                iType(line, delimiter, originalLine);
             }
             else if(currToken.compare("sw")==0){
-                swType(read, written, line, delimiter);
+                swType(line, delimiter, originalLine);
             }
             else if(currToken.compare("lw")==0){
-                lwType(read, written, line, delimiter);
+                lwType(line, delimiter, originalLine);
             }
             else if(currToken.compare("mult")==0){
-                rType(read, written, line, delimiter);
+                rType(line, delimiter, originalLine);
             }
         }
         inFile.close();
@@ -141,18 +225,5 @@ Graph DDependency::constructDependencyG(const string &instrFile){
         cout << "Failure trying to read from input file" << endl;
     }
     
-    Graph g;
-    
-    g.addVertex("V1");
-    g.addVertex("V2");
-    g.addVertex("V3");
-    g.addVertex("V4");
-    g.addVertex("V5");
-    
-    g.addEdge("V1", "V2", 1);
-    g.addEdge("V2", "V3", 1);
-    g.addEdge("V3", "V4", 1);
-    g.addEdge("V4", "V5", 1);
-    
-    return g;
+    return dataG;
 }
