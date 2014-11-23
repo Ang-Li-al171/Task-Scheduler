@@ -27,6 +27,12 @@ void Graph::addEdge(const string &from, const string &to, double cost){
     vertex *t = vertices.find(to)->second;
     pair<int, vertex*> edge = make_pair(cost, t);
     f->adj.push_back(edge);
+    t->depth = t->depth < (f->depth+1) ? (f->depth+1) : t->depth;
+    maximumDepth = maximumDepth < t->depth ? t->depth : maximumDepth;
+}
+
+int Graph::maxDepth(void){
+    return maximumDepth;
 }
 
 void Graph::printGraph(void){
