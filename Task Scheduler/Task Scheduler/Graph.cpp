@@ -27,6 +27,7 @@ void Graph::addEdge(const string &from, const string &to, double cost){
     vertex *t = vertices.find(to)->second;
     pair<int, vertex*> edge = make_pair(cost, t);
     f->adj.push_back(edge);
+    
     t->depth = t->depth < (f->depth+1) ? (f->depth+1) : t->depth;
     maximumDepth = maximumDepth < t->depth ? t->depth : maximumDepth;
 }
@@ -37,6 +38,7 @@ int Graph::maxDepth(void){
 
 void Graph::printGraph(void){
     // print out the data dependency graph for debugging
+    cout << endl;
     for(Graph::vmap::iterator itr = vertices.begin(); itr!= vertices.end(); itr++){
         cout << "vertex " << itr->second->name << " : " << endl;
         for(vector<vertex::ve>::iterator adjV = itr->second->adj.begin();

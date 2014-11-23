@@ -11,7 +11,7 @@
 #include <string>
 #include <fstream>
 
-// register to line map: maps register name string to the line it's read/written
+// register to line map: maps register name string to the line it's read/written, as a vertex ptr
 typedef map<string,vertex*> r2lMap;
 r2lMap read;
 r2lMap written;
@@ -38,7 +38,7 @@ pair<string,string> nextToken(string line, const string& delimiter){
     return make_pair(token, line);
 }
 
-string findRegInMem(string memAddr){
+string findRegInMemAddr(string memAddr){
     size_t pos = memAddr.find("(");
     size_t pos2 = memAddr.find(")");
     return memAddr.substr(pos+1, pos2-2);
@@ -141,7 +141,7 @@ void lwType(string line, const string& delimiter, const string& oriLine){
     }
     
     result = nextToken(line, delimiter);
-    string rs = findRegInMem(result.first);
+    string rs = findRegInMemAddr(result.first);
     line = result.second;
     vertex* d2 = readDependency(rs);
     if(d2!=NULL){
@@ -167,7 +167,7 @@ void swType(string line, const string& delimiter, const string& oriLine){
     }
     
     result = nextToken(line, delimiter);
-    string rt = findRegInMem(result.first);
+    string rt = findRegInMemAddr(result.first);
     line = result.second;
     vertex* d3 = readDependency(rt);
     if(d3!=NULL){
@@ -203,10 +203,17 @@ Graph DDependency::constructDependencyG(const string &instrFile){
             line = result.second;
             
             // tokenize the line, and deal with the instruction, assuming space delimited
-            if(currToken.compare("add")==0){
+            if(currToken.compare("add")==0 || currToken.compare("sub")==0
+               || currToken.compare("mult")==0 || currToken.compare("div")==0){
                 rType(line, delimiter, originalLine);
             }
-            else if(currToken.compare("addi")==0){
+            else if(currToken.compare("addi")==0 || currToken.compare("subi")==0
+                    || currToken.compare("multi")==0 || currToken.compare("divi")==0){
+                iType(line, delimiter, originalLine);
+            }
+            else if (currToken.compare("beq")==0 || currToken.compare("blt")==0 ||
+                     currToken.compare("bgt")==0 || currToken.compare("bge")==0 ||
+                     currToken.compare("ble")==0){
                 iType(line, delimiter, originalLine);
             }
             else if(currToken.compare("sw")==0){
@@ -214,9 +221,6 @@ Graph DDependency::constructDependencyG(const string &instrFile){
             }
             else if(currToken.compare("lw")==0){
                 lwType(line, delimiter, originalLine);
-            }
-            else if(currToken.compare("mult")==0){
-                rType(line, delimiter, originalLine);
             }
         }
         inFile.close();

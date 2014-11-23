@@ -28,7 +28,7 @@ int main(int argc, const char * argv[])
     
     g.printGraph();
     
-    cout << g.maximumDepth << endl;
+    cout << endl << "Graph has maximum depth " << g.maximumDepth << endl;
     
     return 0;
 }
