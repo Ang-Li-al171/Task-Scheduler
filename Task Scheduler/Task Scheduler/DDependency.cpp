@@ -180,11 +180,9 @@ void swType(string line, const string& delimiter, const string& oriLine){
     cout << " " << "+" << rs << "+" << rt << endl;
 }
 
-Graph DDependency::constructDependencyG(const string &instrFile){
+Graph DDependency::constructDependencyG(ifstream& inFile){
     
-    // for file inputs
     string line;
-    ifstream inFile (instrFile);
     
     if(inFile.is_open()){
         while(getline(inFile,line)){

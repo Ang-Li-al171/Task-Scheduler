@@ -11,6 +11,7 @@
 		BC77ADF01A1AEBF30024AF51 /* Task_Scheduler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC77ADEF1A1AEBF30024AF51 /* Task_Scheduler.1 */; };
 		BC77ADFB1A1AED280024AF51 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADF91A1AED280024AF51 /* Graph.cpp */; };
 		BC77ADFE1A1AFA8A0024AF51 /* DDependency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */; };
+		BCB292D41A21760E00C2FEA7 /* ControlPenalty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCB292D21A21760E00C2FEA7 /* ControlPenalty.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,8 @@
 		BC77ADFA1A1AED280024AF51 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DDependency.cpp; sourceTree = "<group>"; };
 		BC77ADFD1A1AFA8A0024AF51 /* DDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDependency.h; sourceTree = "<group>"; };
+		BCB292D21A21760E00C2FEA7 /* ControlPenalty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControlPenalty.cpp; sourceTree = "<group>"; };
+		BCB292D31A21760E00C2FEA7 /* ControlPenalty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPenalty.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +75,8 @@
 				BC77ADFA1A1AED280024AF51 /* Graph.h */,
 				BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */,
 				BC77ADFD1A1AFA8A0024AF51 /* DDependency.h */,
+				BCB292D21A21760E00C2FEA7 /* ControlPenalty.cpp */,
+				BCB292D31A21760E00C2FEA7 /* ControlPenalty.h */,
 			);
 			path = "Task Scheduler";
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC77ADFB1A1AED280024AF51 /* Graph.cpp in Sources */,
+				BCB292D41A21760E00C2FEA7 /* ControlPenalty.cpp in Sources */,
 				BC77ADFE1A1AFA8A0024AF51 /* DDependency.cpp in Sources */,
 				BC77ADEE1A1AEBF30024AF51 /* main.cpp in Sources */,
 			);
@@ -239,6 +245,7 @@
 				BC77ADF51A1AEBF30024AF51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
