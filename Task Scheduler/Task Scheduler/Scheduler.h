@@ -13,5 +13,5 @@ class Scheduler{
 		Scheduler(void);
 		Scheduler(int,int);
 		void Schedule_minmin(int **, int *);
-		friend void findmin( int ** comptime, std::vector<int> & comptasks, std::vector<int> & min);
-};
+		void Schedule_maxmin(int **, int *);
+	};

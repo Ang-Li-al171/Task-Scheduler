@@ -13,19 +13,23 @@ for(int i = 0; i < 4;i++)
     etc[i] = new int[2];
 
 int* corestime = new int[2];
-
-corestime[0] = 55;
-corestime[1] = 47;
+int* corestime1 = new int[2];
+corestime[0] = 50;
+corestime[1] = 49;
+corestime1[0] = 50;
+corestime1[1] = 49;
 
 for(int i = 0; i < 4; i++){
 	for (int j = 0; j <2; j++){
-		etc[i][j] = rand() % 7 + 5;
+		etc[i][j] =  2*i + 3 * j + 1;
 	}
 }
 
 init.Schedule_minmin(etc, corestime);
+init.Schedule_maxmin(etc, corestime1);
 
-cout << corestime[0] << corestime[1];
+printf("%d %d\n", corestime[0], corestime[1]);
+printf("%d %d", corestime1[0], corestime1[1]);
 for(int i = 0; i < 4; i++) {
     delete [] etc[i];
 }
