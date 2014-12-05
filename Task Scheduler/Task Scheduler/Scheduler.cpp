@@ -1,6 +1,7 @@
 #include "Scheduler.h"
 #include <map>
 #include <stdio.h>
+#include <stdlib.h>
 
 
 Scheduler::Scheduler(void): cores(0), tasks(0){}
@@ -8,7 +9,7 @@ Scheduler::Scheduler(int _cores, int _tasks): cores(_cores), tasks(_tasks){}
 
 void findmin( int ** comptime, int * comptasks, int * min, int task, int core){
 	int* currentmin = new int[2];
-	int minimum = INT32_MAX;
+	int minimum;
 	for (int i = 0; i < task; i++){
 		if(comptasks[i] ==1){
 			minimum = comptime[i][0];
@@ -149,3 +150,52 @@ void Scheduler::Schedule_maxmin(int ** ETC, int * cores_time){
 
 }
 			
+void Scheduler::Schedule_greedy(int ** ETC, int * cores_time){
+	 int** comp_time = new int*[tasks];
+	 for(int i = 0; i < tasks; i++)
+	     comp_time[i] = new int[cores];
+	int currenttask, mincore;
+	int number = tasks;
+	int* comp_tasks = new int[tasks];
+	for(int i = 0; i< tasks; i++){
+		comp_tasks[i] = 1;
+	}
+	
+    	
+	for(int i = 0; i < tasks; i++){
+		for(int j = 0; j < cores; j++){
+			comp_time[i][j] = ETC[i][j] + cores_time[j];
+		}
+	}
+	while(number != 0){
+		currenttask = (rand()%tasks);
+		printf("%d \n", currenttask);
+		if(comp_tasks[currenttask] == 1){
+		mincore = 0;
+		for(int p = 1; p < cores; p++){
+			if(comp_time[currenttask][p] <= comp_time[currenttask][mincore]){
+				mincore = p;
+			}
+		}		
+		printf("%d \n", mincore);	
+		cores_time[mincore] = cores_time[mincore] +  ETC[currenttask][mincore];
+		comp_tasks[currenttask] = 0;
+		for(int i = 0; i < tasks; i++){
+			for(int j = 0; j < cores; j++){
+				comp_time[i][j] = ETC[i][j] + cores_time[j];
+			}
+		}
+		number = number - 1;
+	}
+}
+		
+	
+	delete [] comp_tasks;
+	
+	for(int i = 0; i < tasks;i++) {
+	    delete [] comp_time[i];
+	}
+	delete [] comp_time;
+
+
+}

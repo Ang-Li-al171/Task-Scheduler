@@ -14,4 +14,5 @@ class Scheduler{
 		Scheduler(int,int);
 		void Schedule_minmin(int **, int *);
 		void Schedule_maxmin(int **, int *);
+		void Schedule_greedy(int **, int *);
 	};
