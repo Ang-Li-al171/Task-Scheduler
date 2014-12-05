@@ -19,7 +19,7 @@ void Graph::addVertex(const string &name){
         vertices[name]=v;
         return;
     }
-    cout << "\nVertex already exists!\n";
+//    cout << "\nVertex already exists!\n";
 }
 
 void Graph::addEdge(const string &from, const string &to, double cost){

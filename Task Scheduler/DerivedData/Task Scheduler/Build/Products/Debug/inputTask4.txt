@@ -1,0 +1,50 @@
+main:
+addiu $sp, $sp, -16
+sw $ra, 0($sp)
+sw $s0, 4($sp)
+sw $s1, 8($sp)
+sw $s2, 12($sp)
+# initialization of the storing array
+la $s0, array	# get pointer to array
+li $s1, 0	# i = 0
+li $s2, 10
+// 100
+L_scan:
+beq $s1, $s2, L_then	# if (i==10) goto L_then
+la $a0, str
+li $v0, 4
+syscall		# prompt user for input
+li $v0, 5
+syscall
+move $t0, $v0
+sw $t0, 0($s0)
+addi $s0, 4
+addi $s1, 1
+j L_scan
+L_then:
+la $s0, array
+li $s1, 0
+li $t0, 1
+L_check:
+beq $s1, $s2, done
+lw $t1, 0($s0)
+andi $t2, $t1, 1
+addi $s0, 4
+addi $s1, 1
+beq $t2, $t0, L_check	# if last bit == 1, continue with loop
+// 50
+L_print:
+move $a0, $t1
+li $v0, 1
+syscall
+la $a0, strn
+li $v0, 4
+syscall
+b L_check
+done:
+lw $ra, 0($sp)
+lw $s0, 4($sp)
+lw $s1, 8($sp)
+lw $s2, 12($sp)
+addiu $sp, $sp, 16
+jr $ra	# jump back to wherever main is called

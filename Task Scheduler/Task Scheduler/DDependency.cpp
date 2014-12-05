@@ -183,6 +183,7 @@ void swType(string line, const string& delimiter, const string& oriLine){
 Graph DDependency::constructDependencyG(ifstream& inFile){
     
     string line;
+    int instrCnt = 0;
     
     if(inFile.is_open()){
         while(getline(inFile,line)){
@@ -203,24 +204,39 @@ Graph DDependency::constructDependencyG(ifstream& inFile){
             // tokenize the line, and deal with the instruction, assuming space delimited
             if(currToken.compare("add")==0 || currToken.compare("sub")==0
                || currToken.compare("mult")==0 || currToken.compare("div")==0){
+                instrCnt++;
                 rType(line, delimiter, originalLine);
             }
             else if(currToken.compare("addi")==0 || currToken.compare("subi")==0
                     || currToken.compare("multi")==0 || currToken.compare("divi")==0){
+                instrCnt++;
                 iType(line, delimiter, originalLine);
             }
             else if (currToken.compare("beq")==0 || currToken.compare("blt")==0 ||
                      currToken.compare("bgt")==0 || currToken.compare("bge")==0 ||
                      currToken.compare("ble")==0){
+                instrCnt++;
                 iType(line, delimiter, originalLine);
             }
             else if(currToken.compare("sw")==0){
+                instrCnt++;
                 swType(line, delimiter, originalLine);
             }
             else if(currToken.compare("lw")==0){
+                instrCnt++;
                 lwType(line, delimiter, originalLine);
             }
+            else if(currToken.compare("addiu")==0 || currToken.compare("la")==0 ||
+                    currToken.compare("li")==0 || currToken.compare("syscall")==0 ||
+                    currToken.compare("move")==0 || currToken.compare("jr")==0 ||
+                    currToken.compare("andi")==0 || currToken.compare("b")==0 ||
+                    currToken.compare("j")==0 ){
+                instrCnt++;
+            }
         }
+        
+        dataG.instrCount = instrCnt;
+        cout << "number of instr is " << instrCnt << endl;
         inFile.close();
         
     } else {

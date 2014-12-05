@@ -34,6 +34,7 @@ public:
     Graph(void);
     typedef map<string, vertex*> vmap;
     vmap vertices;
+    int instrCount;
     int maximumDepth;
     void addVertex(const string&);
     void addEdge(const string& from, const string& to, double cost);

@@ -1,0 +1,41 @@
+main:
+addiu $sp, $sp, -16
+sw $ra, 0($sp)
+sw $s0, 4($sp)
+sw $s1, 8($sp)
+sw $s2, 12($sp)
+# initialization of the storing array
+la $s0, floats	# get pointer to array
+li $s1, 0	# i = 0
+li $s2, 2
+// 30
+L_scan:
+beq $s1, $s2, L_then
+la $a0, str
+li $v0, 4
+syscall
+li $v0, 6
+syscall
+swc1 $f0, 0($s0)
+addi $s0, 4
+addi $s1, 1
+j L_scan
+L_then:
+la $s0, floats
+lwc1 $f1, 0($s0)
+lwc1 $f2, 4($s0)
+add.s $f3, $f1, $f2
+mtc1 $s2, $f4
+cvt.s.w $f4, $f4
+div.s $f12, $f3, $f4
+li $v0, 2
+syscall
+la $a0, nln
+li $v0, 4
+syscall
+lw $ra, 0($sp)
+lw $s0, 4($sp)
+lw $s1, 8($sp)
+lw $s2, 12($sp)
+addiu $sp, $sp, 16
+jr $ra

@@ -1,0 +1,5 @@
+lw $r4, 0($r1)
+add $r1, $r1, $r2
+addi $r2, $r2, 5
+mult $r3, $r1, $r2
+sw $r3, 0($r4)
