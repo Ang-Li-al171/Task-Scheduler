@@ -25,6 +25,7 @@ L_then:
 la $s0, array
 li $s1, 0
 li $t0, 1
+// 200
 L_check:
 beq $s1, $s2, done
 lw $t1, 0($s0)

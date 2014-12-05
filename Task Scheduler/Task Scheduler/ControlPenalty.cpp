@@ -57,8 +57,6 @@ int ControlPenalty::calculateBranchPenalty(processor* p, ifstream& inFile){
 
 int ControlPenalty::calculateLoopPenalty(processor* p, ifstream& inFile){
     
-    cout << endl;
-    
     string line;
     string lastLine = "";
     int totalPenalty = 0;
@@ -84,8 +82,19 @@ int ControlPenalty::calculateLoopPenalty(processor* p, ifstream& inFile){
                 strMap::iterator mapItr = labelToLoopCount.find(label);
                 if(mapItr != labelToLoopCount.end()){
                     string numIteration = mapItr->second;
-                    cout << "loop " << label << " runs " << numIteration << " times..." << endl;
-//                    totalPenalty += p->branchPenaltyPerMiss*numIteration;
+//                    cout << "loop " << label << " runs " << numIteration << " times..." << endl;
+                    totalPenalty += p->branchPenaltyPerMiss*atoi(numIteration.c_str());
+                }
+            }
+            
+            if(currToken.compare("j") == 0 || currToken.compare("b") == 0){
+                
+                string label = nextToken(result.second, delimiter).first;
+                strMap::iterator mapItr = labelToLoopCount.find(label);
+                if(mapItr != labelToLoopCount.end()){
+                    string numIteration = mapItr->second;
+                    //                    cout << "loop " << label << " runs " << numIteration << " times..." << endl;
+                    totalPenalty += p->branchPenaltyPerMiss*atoi(numIteration.c_str());
                 }
             }
             

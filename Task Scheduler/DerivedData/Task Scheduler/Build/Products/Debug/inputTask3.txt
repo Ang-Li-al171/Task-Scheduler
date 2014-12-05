@@ -10,8 +10,8 @@ done:
 addi $r3, $r0, 999
 // 999
 secondLoop:
-mult $r4, $r4, $r1
-addi $r1, $r1, 10
-blt $r1, $r3, secondLoop
-sw $r4, 0($r5)
-lw $r6, 0($r5)
+mult $r4, $r4, $r5
+addi $r5, $r5, 10
+blt $r5, $r3, secondLoop
+sw $r4, 0($r7)
+lw $r6, 0($r7)

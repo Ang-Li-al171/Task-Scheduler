@@ -8,7 +8,7 @@ Scheduler::Scheduler(int _cores, int _tasks): cores(_cores), tasks(_tasks){}
 
 void findmin( int ** comptime, int * comptasks, int * min, int task, int core){
 	int* currentmin = new int[2];
-	int minimum;
+	int minimum = INT32_MAX;
 	for (int i = 0; i < task; i++){
 		if(comptasks[i] ==1){
 			minimum = comptime[i][0];

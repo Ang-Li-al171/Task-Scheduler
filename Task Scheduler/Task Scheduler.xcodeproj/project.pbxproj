@@ -11,6 +11,7 @@
 		BC77ADF01A1AEBF30024AF51 /* Task_Scheduler.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = BC77ADEF1A1AEBF30024AF51 /* Task_Scheduler.1 */; };
 		BC77ADFB1A1AED280024AF51 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADF91A1AED280024AF51 /* Graph.cpp */; };
 		BC77ADFE1A1AFA8A0024AF51 /* DDependency.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */; };
+		BCAF3BA31A314A53003CFC1C /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCAF3BA21A314A53003CFC1C /* Scheduler.cpp */; };
 		BCB292D41A21760E00C2FEA7 /* ControlPenalty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCB292D21A21760E00C2FEA7 /* ControlPenalty.cpp */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,8 @@
 		BC77ADFA1A1AED280024AF51 /* Graph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
 		BC77ADFC1A1AFA8A0024AF51 /* DDependency.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DDependency.cpp; sourceTree = "<group>"; };
 		BC77ADFD1A1AFA8A0024AF51 /* DDependency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDependency.h; sourceTree = "<group>"; };
+		BCAF3BA11A314A4A003CFC1C /* Scheduler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scheduler.h; sourceTree = "<group>"; };
+		BCAF3BA21A314A53003CFC1C /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
 		BCB292D21A21760E00C2FEA7 /* ControlPenalty.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ControlPenalty.cpp; sourceTree = "<group>"; };
 		BCB292D31A21760E00C2FEA7 /* ControlPenalty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ControlPenalty.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +72,8 @@
 		BC77ADEC1A1AEBF30024AF51 /* Task Scheduler */ = {
 			isa = PBXGroup;
 			children = (
+				BCAF3BA21A314A53003CFC1C /* Scheduler.cpp */,
+				BCAF3BA11A314A4A003CFC1C /* Scheduler.h */,
 				BC77ADED1A1AEBF30024AF51 /* main.cpp */,
 				BC77ADEF1A1AEBF30024AF51 /* Task_Scheduler.1 */,
 				BC77ADF91A1AED280024AF51 /* Graph.cpp */,
@@ -136,6 +141,7 @@
 				BCB292D41A21760E00C2FEA7 /* ControlPenalty.cpp in Sources */,
 				BC77ADFE1A1AFA8A0024AF51 /* DDependency.cpp in Sources */,
 				BC77ADEE1A1AEBF30024AF51 /* main.cpp in Sources */,
+				BCAF3BA31A314A53003CFC1C /* Scheduler.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

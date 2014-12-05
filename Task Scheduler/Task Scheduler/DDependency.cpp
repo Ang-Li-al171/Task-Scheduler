@@ -99,7 +99,7 @@ void rType(string line, const string& delimiter, const string& oriLine){
     read[rs]=new vertex(oriLine);
     read[rt]=new vertex(oriLine);
     
-    cout << rd << "+" << rs << "+" << rt << endl;
+//    cout << rd << "+" << rs << "+" << rt << endl;
 }
 
 void iType(string line, const string& delimiter, const string& oriLine){
@@ -125,7 +125,7 @@ void iType(string line, const string& delimiter, const string& oriLine){
     written[rd]=new vertex(oriLine);
     read[rs]=new vertex(oriLine);
     
-    cout << rd << "+" << rs << "+ " << endl;
+//    cout << rd << "+" << rs << "+ " << endl;
 }
 
 void lwType(string line, const string& delimiter, const string& oriLine){
@@ -151,7 +151,7 @@ void lwType(string line, const string& delimiter, const string& oriLine){
     written[rd]=new vertex(oriLine);
     read[rs]=new vertex(oriLine);
     
-    cout << rd << "+" << rs << "+ " << endl;
+//    cout << rd << "+" << rs << "+ " << endl;
 }
 
 void swType(string line, const string& delimiter, const string& oriLine){
@@ -177,7 +177,7 @@ void swType(string line, const string& delimiter, const string& oriLine){
     read[rs]=new vertex(oriLine);
     read[rt]=new vertex(oriLine);
     
-    cout << " " << "+" << rs << "+" << rt << endl;
+//    cout << " " << "+" << rs << "+" << rt << endl;
 }
 
 Graph DDependency::constructDependencyG(ifstream& inFile){
@@ -236,7 +236,7 @@ Graph DDependency::constructDependencyG(ifstream& inFile){
         }
         
         dataG.instrCount = instrCnt;
-        cout << "number of instr is " << instrCnt << endl;
+//        cout << "number of instr is " << instrCnt << endl;
         inFile.close();
         
     } else {
