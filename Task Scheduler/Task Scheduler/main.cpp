@@ -129,16 +129,21 @@ int main(int argc, const char * argv[])
         
     int* corestime = new int[2];
     int* corestime1 = new int[2];
+    int* corestime2 = new int[2];
     corestime[0] = 50;
     corestime[1] = 49;
     corestime1[0] = 50;
     corestime1[1] = 49;
+    corestime2[0] = 50;
+    corestime2[1] = 49;
     
     init.Schedule_minmin(etcMatrix, corestime);
     init.Schedule_maxmin(etcMatrix, corestime1);
+    init.Schedule_greedy(etcMatrix, corestime2);
     
     printf("%d %d\n", corestime[0], corestime[1]);
-    printf("%d %d", corestime1[0], corestime1[1]);
+    printf("%d %d\n", corestime1[0], corestime1[1]);
+    printf("%d %d\n", corestime2[0], corestime2[1]);
     for(int i = 0; i < 5; i++) {
         delete [] etcMatrix[i];
     }

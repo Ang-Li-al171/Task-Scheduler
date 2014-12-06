@@ -169,7 +169,7 @@ void Scheduler::Schedule_greedy(int ** ETC, int * cores_time){
 	}
 	while(number != 0){
 		currenttask = (rand()%tasks);
-		printf("%d \n", currenttask);
+//		printf("%d \n", currenttask);
 		if(comp_tasks[currenttask] == 1){
 		mincore = 0;
 		for(int p = 1; p < cores; p++){
@@ -177,7 +177,7 @@ void Scheduler::Schedule_greedy(int ** ETC, int * cores_time){
 				mincore = p;
 			}
 		}		
-		printf("%d \n", mincore);	
+//		printf("%d \n", mincore);	
 		cores_time[mincore] = cores_time[mincore] +  ETC[currenttask][mincore];
 		comp_tasks[currenttask] = 0;
 		for(int i = 0; i < tasks; i++){
